@@ -17,10 +17,10 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large; 
     border: 4px solid black;
-    overflow: scroll;
+    /*overflow: scroll;*/
     min-height: 80vh;
 }
-.head{
+#head{
     display: flex;
     height: 10vh;
     width: 100%;
@@ -43,11 +43,16 @@ body{
     padding: 10px;
     border: 4px;
     color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    -2px 2px 0px black,  
+    2px -2px 0px black;  
 }
-.container{
+#container{
     display: none;
 }
-.question{
+#question{
     background-color: bisque;
     display: flex;
     justify-content: center;
@@ -61,22 +66,7 @@ body{
     font-size: x-large; 
     border: 4px solid black;
 }
-.answer_1{
-    justify-content: center;
-    display: flex;
-    height: 10vh;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-    background-color: chartreuse;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    font-size: xx-large;
-    padding: 10px;
-    border: 4px;
-    color: white;
-}
-.answer_2{
+#answer_1{
     justify-content: center;
     display: flex;
     height: 10vh;
@@ -90,8 +80,33 @@ body{
     padding: 10px;
     border: 4px;
     color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    -2px 2px 0px black,
+    2px -2px 0px black;
 }
-.answer_3{
+#answer_2{
+    justify-content: center;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    background-color: chartreuse;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 10px;
+    border: 4px;
+    color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    -2px 2px 0px black,
+    2px -2px 0px black;
+}
+#answer_3{
     justify-content: center;
     display: flex;
     height: 10vh;
@@ -105,8 +120,13 @@ body{
     padding: 10px;
     border: 4px;
     color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    -2px 2px 0px black,
+    2px -2px 0px black;
 }
-.answer_4{
+#answer_4{
     justify-content: center;
     display: flex;
     height: 10vh;
@@ -120,4 +140,26 @@ body{
     padding: 10px;
     border: 4px;
     color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    -2px 2px 0px black,
+    2px -2px 0px black;
 }
+#outcome{
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: xx-large;
+        font-weight: bolder;
+        border: 4px solid black;
+        /*overflow: scroll;*/
+        min-height: 90vh;
+    }
