@@ -7,11 +7,10 @@
     <title>The Univesity Game</title>
 </head>
 <body>
-
     <div id="head">
         <img src="image.png" alt="Politechnika logo">
     </div>
-    <div id="text">
+    <div id="text" class="text">
     Renowned for its cutting-edge research and academic excellence in biotechnology, food science, and nutrition. One of its key strengths is the integration of biotechnology with food production, allowing for advancements in sustainable food technologies, functional foods, and nutritional innovations. The Dean of the Faculty is Dr. Hab. Edyta Gendaszewska-Darmach. Here you can join 3 student research groups: </br>SKNCh Kollaps (building A2) – famous for making cosmetics for cancer patients, </br>SKN Biotechnologów FERMENT (building A4) –  created by people fascinated by biotechnology and how interdisciplinary this scientific field is, </br>SKN BioMass – a dynamic community that brings together enthusiasts of bioeconomy, industrial and environmental biotechnology. Many students for excellent food that local cafeteria offers.
 
       </div>
@@ -47,7 +46,6 @@
   <div id="answer_2">Kulturalni kibice.</div>
   <div id="answer_3">Sialalalalalalala</div>
   <div id="answer_4">Piwo?</div></div>
-  <div id="outcome"></div>
   <script>
         // The correct answer
         const correctDiv = 1;
@@ -60,13 +58,17 @@
 
         // Function to check if the clicked div is correct
         function checkDiv(clickedDiv) {
-            const message = document.getElementById('outcome');
+            const message = document.getElementById('text');
             if (clickedDiv === correctDiv) {
-                message.textContent = "Congratulations!";
-                document.getElementById("container").style.display = "none";
+              document.getElementById("text").style.minHeight = "90vh";
+              document.getElementById("text").style.display = "flex";
+              message.textContent = "Congratulations! Correct answer.";
+              document.getElementById("container").style.display = "none";
             } else {
-                message.textContent = 'Try again! (Refresh to play again)';
-                document.getElementById("container").style.display = "none";
+              document.getElementById("text").style.minHeight = "90vh";
+              document.getElementById("text").style.display = "flex";
+              message.textContent = 'Try again! (Refresh to play again)';
+              document.getElementById("container").style.display = "none";
             }
         }
     </script>
