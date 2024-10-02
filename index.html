@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="head">
+    <div id="head">
         <img src="image.png" alt="Politechnika logo">
     </div>
     <div id="text">
@@ -42,10 +42,33 @@
       timeLeft--; // Decrement the time remaining
     }, 1000); // Run every 1 second (1000 milliseconds)
   </script>
-  <div id="container" class="container"><div class="question"></div>
-  <div class="answer_1"></div>
-  <div class="answer_2"></div>
-  <div class="answer_3"></div>
-  <div class="answer_4"></div></div>
+  <div id="container"><div id="question">Politechnika?</div>
+  <div id="answer_1">Dzisiaj baluje.</div>
+  <div id="answer_2">Kulturalni kibice.</div>
+  <div id="answer_3">Sialalalalalalala</div>
+  <div id="answer_4">Piwo?</div></div>
+  <div id="outcome"></div>
+  <script>
+        // The correct answer
+        const correctDiv = 1;
+
+        // Adding event listeners to all divs
+        document.getElementById('answer_1').addEventListener('click', function() { checkDiv(1); });
+        document.getElementById('answer_2').addEventListener('click', function() { checkDiv(2); });
+        document.getElementById('answer_3').addEventListener('click', function() { checkDiv(3); });
+        document.getElementById('answer_4').addEventListener('click', function() { checkDiv(4); });
+
+        // Function to check if the clicked div is correct
+        function checkDiv(clickedDiv) {
+            const message = document.getElementById('outcome');
+            if (clickedDiv === correctDiv) {
+                message.textContent = "Congratulations!";
+                document.getElementById("container").style.display = "none";
+            } else {
+                message.textContent = 'Try again! (Refresh to play again)';
+                document.getElementById("container").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
