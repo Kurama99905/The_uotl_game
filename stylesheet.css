@@ -5,6 +5,7 @@ body{
     overflow: scroll;
 }
 .text{
+    display: flex;
     background-color: bisque;
     justify-content: center;
     align-items: center;
