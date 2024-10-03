@@ -5,7 +5,6 @@ body{
     overflow: scroll;
 }
 .text{
-    display: flex;
     background-color: bisque;
     justify-content: center;
     align-items: center;
@@ -19,6 +18,9 @@ body{
     border: 4px solid black;
     /*overflow: scroll;*/
     min-height: 80vh;
+}
+.box{
+    display: flex;
 }
 #head{
     display: flex;
@@ -59,7 +61,7 @@ body{
     align-items: center;
     margin: auto;
     width: 100%;
-    height: 37vh;
+    height: 42vh;
     padding: 5px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -145,4 +147,10 @@ body{
     -2px -2px 0px black, 
     -2px 2px 0px black,
     2px -2px 0px black;
+}
+#title{
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 10px;
+    border: 4px;
 }
