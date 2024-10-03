@@ -6,13 +6,12 @@ body{
 }
 .text{
     background-color: bisque;
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 7px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large; 
