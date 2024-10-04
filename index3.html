@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>The Univesity Game</title>
+</head>
+<body>
+    <div id="head">
+        <img src="image.png" alt="Politechnika logo">
+    </div>
+    <div id="text" class="text">
+    <div id="title">Psysics</div>
+    <div id="box">
+      B14-B15 The Institute of Physics 
+This is a unit of the Faculty of Technical Physics, Computer Science and Applied Mathematics of the Lodz University of Technology.
+The Faculty has existed since October first 1976, when it was named: Technical Physics and Applied Mathematics (FTIMS).
+The Institute conducts experimental and theoretical research in most areas of modern solid state physics.
+Dean of the Faculty of FTIMS is Prof. Dr. Hab. Eng. Adam Wojciechowski.
+Bulletin of physics and applied mathematics is a magazine where the articles written by students and employees of this institute are published.    </div>
+      </div>
+      <div id="timer">1:00</div>
+  <script>
+    let timeLeft = 60; // Set to 60 seconds (1 minute)
+    const timerElement = document.getElementById('timer');
+    const contentElement = document.getElementById('timer');
 
+    const countdown = setInterval(() => {
+      // Calculate minutes and seconds
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+
+      // Update the timer display
+      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+      // Check if time is up
+      if (timeLeft <= 0) {
+        clearInterval(countdown); // Stop the timer
+        timerElement.textContent = "0:00"; // Set timer to 0:00
+        contentElement.textContent = "Time's up! Time to check your knowledge."; // Change the content
+        document.getElementById("text").style.display = "none";
+        document.getElementById("timer").style.display = "none";
+        document.getElementById("container").style.display = "block";
+      }
+
+      timeLeft--; // Decrement the time remaining
+    }, 1000); // Run every 1 second (1000 milliseconds)
+  </script>
+  <div id="container"><div id="question">Politechnika?</div>
+  <div id="answer_1">Dzisiaj baluje.</div>
+  <div id="answer_2">Kulturalni kibice.</div>
+  <div id="answer_3">Sialalalalalalala</div>
+  <div id="answer_4">Piwo?</div></div>
+  <script>
+        // The correct answer
+        const correctDiv = 1;
+
+        // Adding event listeners to all divs
+        document.getElementById('answer_1').addEventListener('click', function() { checkDiv(1); });
+        document.getElementById('answer_2').addEventListener('click', function() { checkDiv(2); });
+        document.getElementById('answer_3').addEventListener('click', function() { checkDiv(3); });
+        document.getElementById('answer_4').addEventListener('click', function() { checkDiv(4); });
+
+        // Function to check if the clicked div is correct
+        function checkDiv(clickedDiv) {
+            const message = document.getElementById('text');
+            if (clickedDiv === correctDiv) {
+              document.getElementById("text").style.minHeight = "90vh";
+              document.getElementById("text").style.display = "flex";
+              message.textContent = "Congratulations! Correct answer.";
+              document.getElementById("container").style.display = "none";
+            } else {
+              document.getElementById("text").style.minHeight = "90vh";
+              document.getElementById("text").style.display = "flex";
+              message.textContent = 'Try again! (Refresh to play again)';
+              document.getElementById("container").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
